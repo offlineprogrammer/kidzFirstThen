@@ -37,6 +37,7 @@ import {
 
 
 @Component({
+    selector: 'add-routine',
     templateUrl: 'add-routine-modal.html'
 })
 export class AddRoutineModal {

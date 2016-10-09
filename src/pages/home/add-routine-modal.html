@@ -16,36 +16,19 @@
                 <ion-input calss="routine-name" placeholder="Type Name Here" formControlName="kidName" autofocus type="text"></ion-input>
             </ion-item>
 
-            <ion-item class="routine-item" (click)="selectToken()">
-                Select Token
-
-                <ion-thumbnail item-left>
-                    <img src="{{tokenType}}">
-                </ion-thumbnail>
-                 <ion-icon name='ios-arrow-forward' item-right ></ion-icon>
-
-            </ion-item>
-
-            <ion-item class="routine-item" (click)="selectTokenNumbers()">
-                Token Numbers
-
-                <ion-thumbnail item-left>
-                    <img src="{{srcTokenNumbers}}">
-                </ion-thumbnail>
-                 <ion-icon name='ios-arrow-forward' item-right ></ion-icon>
-
-            </ion-item>
             <ion-item class="routine-item">
                 <ion-row>
                     <ion-col width-50>
-                        <button type="button" full danger round large (click)="takePhoto()">
-                    <ion-icon name="md-camera"></ion-icon>
-                </button>
+
+                        <button ion-button color="danger" large full icon-only round (click)="takePhoto()">
+  <ion-icon name="md-camera"></ion-icon>
+</button>
                     </ion-col>
                     <ion-col width-50>
-                        <button type="button" full secondary round large (click)="openGallery()">
-                    <ion-icon name="md-image"></ion-icon>
-                </button>
+                        
+                 <button ion-button large color="secondary" full icon-only round (click)="openGallery()">
+  <ion-icon name="md-image"></ion-icon>
+</button>
                     </ion-col>
                 </ion-row>
             </ion-item>
@@ -53,7 +36,7 @@
         </ion-list>
 
         <div padding>
-            <button primary full round large type="submit" [disabled]="!form.valid"><ion-icon name="md-person-add"></ion-icon></button>
+            <button ion-button color="primary" full round large type="submit" [disabled]="!form.valid"><ion-icon name="md-person-add"></ion-icon></button>
 
         </div>
 
