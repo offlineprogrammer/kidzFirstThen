@@ -7,6 +7,9 @@ import {
 import {
   GAService
 } from '../../services/googleAnalyticsService';
+import {
+  AddRoutineModal
+} from './add-routine-modal';
 
 @Component({
   selector: 'page-home',
@@ -21,5 +24,21 @@ export class HomePage {
      private modalController: ModalController) {
 
   }
+
+addNewRoutine(): void {
+    let modal = this.modalController.create(AddRoutineModal);
+    modal.onDidDismiss(data => {
+      this.dataService.getKids()
+        .then((response) => {
+
+          //this.kids = response;
+
+        });
+    });
+
+    modal.present();
+
+  }
+
 
 }
